@@ -11,7 +11,7 @@ const remove = async () => {
         await rm(filePath);
     } catch(err) {
         if (err.code == 'ENOENT') {
-            throw(new FSError());
+            throw new FSError();
         } else console.error(err);
     }
 };

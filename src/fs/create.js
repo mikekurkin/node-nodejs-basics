@@ -12,7 +12,7 @@ const create = async () => {
         await writeFile(filePath, content, { flag: 'wx+' });
     } catch(err) {
         if (err.code == 'EEXIST') {
-            throw(new FSError());
+            throw new FSError();
         } else console.error(err);
     }
 };
