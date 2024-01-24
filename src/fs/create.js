@@ -1,5 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { FSError } from './fsError.js';
 
 const create = async () => {
     const folder = 'files';
@@ -11,7 +12,7 @@ const create = async () => {
         await writeFile(filePath, content, { flag: 'wx+' });
     } catch(err) {
         if (err.code == 'EEXIST') {
-            throw(new Error('FS operation failed'));
+            throw(new FSError());
         } else console.error(err);
     }
 };
