@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { FSError } from './fsError.js';
+import { FSError } from './helpers.js';
 
 const create = async () => {
     const folder = 'files';

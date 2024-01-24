@@ -1,7 +1,6 @@
 import { rename as rn } from 'node:fs/promises';
 import { join } from 'node:path';
-import { FSError } from './fsError.js';
-import { fileExists } from './helpers.js';
+import { FSError, fileExists } from './helpers.js';
 
 const rename = async () => {
     const folder = 'files'

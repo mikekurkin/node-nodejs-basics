@@ -1,6 +1,6 @@
 import { cp } from 'node:fs/promises';
 import { join } from 'node:path';
-import { FSError } from './fsError.js';
+import { FSError } from './helpers.js';
 
 const copy = async () => {
     const source = 'files';
